@@ -1,0 +1,56 @@
+$touchFilter: opacity(0.5);
+$touchTransform: scale3d(2.2, 2.2, 2.2);
+$mobile: 480px;
+$width: 840px;
+
+.size {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $width;
+}
+
+#page_home {
+  padding: 4em;
+}
+
+#user-icon {
+  margin-bottom: 0.75em;
+
+  a {
+    // todo
+  }
+}
+
+#below-header {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.links {
+  a {
+    margin: 1em;
+
+    i,
+    img {
+      margin: 0 0 0.25em;
+    }
+  }
+
+  a#kelalLogo {
+    img {
+      padding: 0.2em;
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      transform: translateY(-0.5em) scale3d(2, 2, 2) !important;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      img {
+        background-color: rgba(255, 75, 135, 0.5);
+      }
+    }
+  }
+}

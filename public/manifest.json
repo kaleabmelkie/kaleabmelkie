@@ -1,15 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kaleab",
+  "name": "Kaleab S. Melkie",
+  "description": "Kaleab S. Melkie | Co-founder & CEO, kelal tech.",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "logo-256.png",
+      "sizes": "256x256 192x192 152x152 144x144 128x128",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#00B478",
+  "background_color": "#f2f2f2"
 }

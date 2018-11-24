@@ -15,6 +15,7 @@
     "prettier": "^1.15.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-fastclick": "^3.0.2",
     "react-scripts": "2.1.1",
     "typescript": "3.1.6"
   },
@@ -22,8 +23,8 @@
     "run-p": "run-p",
     "run-s": "run-s",
     "precommit": "run-p format build && git update-index --again",
-    "lint": "prettier ./**/*.{css,md,js,json,jsx,sass,scss,ts,tsx}",
-    "format": "prettier --write ./**/*.{css,md,js,json,jsx,sass,scss,ts,tsx}",
+    "lint": "prettier ./{*,src/**/*,public/**/*}.{css,md,js,json,jsx,sass,scss,ts,tsx}",
+    "format": "prettier --write ./{*,src/**/*,public/**/*}.{css,md,js,json,jsx,sass,scss,ts,tsx}",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -1,16 +1,194 @@
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/brands.min.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/solid.min.css';
+
+@font-face {
+  font-family: 'Modern No. 20';
+  src: url(./_assets/fonts/MOD20.TTF) format('truetype');
+}
+
+$touchFilter: opacity(0.5);
+$touchTransform: scale3d(2.2, 2.2, 2.2);
+$mobile: 480px;
+$width: 840px;
+
+* {
+  box-sizing: border-box;
+  transform: scale3d(1, 1, 1);
+  transition: all 300ms;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: $mobile) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+  }
+}
+
+@keyframes TheBgIsAlive {
+  0% {
+    background-color: rgba(0, 180, 120, 0.35);
+  }
+  100% {
+    background-color: rgba(255, 75, 135, 0.14);
+  }
+}
 
 body {
   margin: 0;
   padding: 0;
+  overflow-y: scroll;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+      to bottom left,
+      rgba(255, 255, 255, 0.84),
+      transparent
+    )
+    repeat fixed center center;
+  background-size: auto;
+  color: rgb(0, 0, 0);
+
+  opacity: 0;
+  filter: opacity(0) blur(14px);
+  transform: scale3d(0.9, 0.9, 0);
+  transition: none;
+
+  animation-name: TheBgIsAlive;
+  animation-duration: 14000ms;
+  animation-iteration-count: infinite;
+  animation-delay: 0ms;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-timing-function: linear;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2em 0 0.5em;
+  font-weight: 100;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgb(45, 45, 45);
+
+  .sub {
+    font-weight: initial;
+    letter-spacing: 0.07em;
+    text-transform: initial;
+  }
+}
+h1,
+h2 {
+  .sub {
+    margin-top: 0.75em;
+    font-size: 18px;
+  }
+}
+h3,
+h4 {
+  .sub {
+    margin-top: 0.5em;
+    font-size: 16px;
+  }
+}
+h5,
+h6 {
+  .sub {
+    margin-top: 0.25em;
+    font-size: 14px;
+  }
+}
+
+hr {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  border-radius: 50%;
+  outline: 0;
+  background-color: rgba(140, 140, 140, 0.14);
+}
+
+a,
+a:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(0, 180, 120);
+
+  &:hover,
+  &:focus {
+    color: rgb(255, 75, 135);
+  }
+
+  &:active {
+    filter: $touchFilter;
+    transform: $touchTransform;
+  }
+}
+
+.dim {
+  opacity: 0.7;
+}
+
+.kelal-wordmark::before {
+  content: 'kelal ';
+  color: rgb(0, 180, 120);
+}
+.kelal-wordmark {
+  font-family: 'Modern No. 20', serif;
+  font-size: 120%;
+  letter-spacing: initial;
+  line-height: 66%;
+  text-decoration: none !important;
+  text-transform: lowercase;
+  color: rgb(140, 140, 140) !important;
+}
+.kelal-wordmark::after {
+  content: '.';
+  color: rgb(255, 75, 135);
+}
+
+.paper {
+  display: block;
+  margin: 2em;
+  padding: 1em;
+  border-top: 4px solid rgba(255, 75, 135, 0.5);
+  background: linear-gradient(
+    to bottom left,
+    rgba(255, 255, 255, 0.42),
+    rgba(245, 255, 250, 0.42)
+  );
+  box-shadow: 0 0.14em 0.7em -0.14em rgba(0, 0, 0, 0.07);
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
 }
