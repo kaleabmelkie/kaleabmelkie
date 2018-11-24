@@ -21,7 +21,7 @@
   "scripts": {
     "run-p": "run-p",
     "run-s": "run-s",
-    "precommit": "run-p format build",
+    "precommit": "run-p format build && git update-index --again",
     "lint": "prettier ./**/*.{css,md,js,json,jsx,sass,scss,ts,tsx}",
     "format": "prettier --write ./**/*.{css,md,js,json,jsx,sass,scss,ts,tsx}",
     "start": "react-scripts start",
