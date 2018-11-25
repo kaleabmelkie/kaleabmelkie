@@ -13,6 +13,12 @@ $width: 840px;
   padding: 4em;
 }
 
+@media (max-width: $mobile) {
+  #page_home {
+    padding: 1em;
+  }
+}
+
 #user-icon {
   margin-bottom: 0.75em;
 
