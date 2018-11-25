@@ -22,8 +22,9 @@ export class Home extends Component {
               Co-founder & CEO,{' '}
             </span>
             <a
-              href="http://kelaltech.com/"
               target="_blank"
+              rel="noopener"
+              href="http://kelaltech.com/"
               className="kelal-wordmark"
               title="The Company builds tech that allows smoother information flow."
             >
@@ -56,6 +57,7 @@ export class Home extends Component {
             </a>
             <a
               target="_blank"
+              rel="noopener"
               href="https://linkedin.com/in/kaleabmelkie"
               title="Connect with Kaleab, the Professional!"
             >
@@ -63,13 +65,19 @@ export class Home extends Component {
               <br />
               LinkedIn
             </a>
-            <a target="_blank" href="https://t.me/kaleab14" title=";)">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://t.me/kaleab14"
+              title=";)"
+            >
               <i className="fab fa-3x fa-telegram" />
               <br />
               Telegram
             </a>
             <a
               target="_blank"
+              rel="noopener"
               href="https://twitter.com/kaleab14"
               title="Been here since September 2010."
             >
@@ -85,6 +93,7 @@ export class Home extends Component {
           <p className="links">
             <a
               target="_blank"
+              rel="noopener"
               href="https://www.npmjs.com/~kaleabmelkie"
               title="I'm an author. Not a book author. Guess what I auth. Authenticate this author. Authorize and Poet-rize. 403 the book author. I'm an author. 200!, for I'm a code author."
             >
@@ -95,15 +104,17 @@ export class Home extends Component {
             <a
               id="kelalLogo"
               target="_blank"
+              rel="noopener"
               href="http://kelaltech.com/"
               title="The Company."
             >
-              <img src={kelalTechLogoSrc} />
+              <img alt="kelal tech. Logo" src={kelalTechLogoSrc} />
               <br />
               kelal tech.
             </a>
             <a
               target="_blank"
+              rel="noopener"
               href="https://gitlab.com/kaleabmelkie"
               title="Checkout this hard-coder!"
             >
@@ -113,6 +124,7 @@ export class Home extends Component {
             </a>
             <a
               target="_blank"
+              rel="noopener"
               href="https://github.com/kaleabmelkie"
               title="<-- Go GitLab! Boo.. github.  Not much to see here. Really. Much of what I do is on GitLab."
             >
@@ -124,7 +136,9 @@ export class Home extends Component {
         </div>
 
         <p className="dim" style={{ paddingTop: '3em' }}>
-          <span className="dim">&copy; 2018, Kaleab S. Melkie.</span>
+          <span className="dim" title="All right reserved.">
+            &copy; 2018, Kaleab S. Melkie.
+          </span>
         </p>
       </div>
     )
