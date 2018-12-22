@@ -1,7 +1,8 @@
 {
   "name": "kaleab",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "licence": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.5.0",
     "@tensorflow/tfjs": "^0.13.5",
