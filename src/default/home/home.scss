@@ -49,6 +49,8 @@ $width: 840px;
       height: 2em;
       border-radius: 50%;
       transform: translateY(-0.5em) scale3d(2, 2, 2) !important;
+      transition: inherit;
+      transition-property: background-color;
     }
 
     &:hover,

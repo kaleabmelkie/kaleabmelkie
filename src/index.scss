@@ -1,6 +1,5 @@
-@import '../node_modules/@fortawesome/fontawesome-free/css/brands.min.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/solid.min.css';
+@import '~animate.css/animate.min.css';
+@import '~aos/dist/aos.css';
 
 @font-face {
   font-family: 'Modern No. 20';
@@ -16,7 +15,6 @@ $width: 840px;
 * {
   box-sizing: border-box;
   transform: scale3d(1, 1, 1);
-  transition: all 300ms;
 }
 
 html,
@@ -62,10 +60,9 @@ body {
   background-size: auto;
   color: rgb(0, 0, 0);
 
-  opacity: 0;
+  transition: none;
   filter: opacity(0) blur(14px);
   transform: scale3d(0.9, 0.9, 0);
-  transition: none;
 
   animation-name: TheBgIsAlive;
   animation-duration: 14000ms;
@@ -138,6 +135,16 @@ a:visited {
   display: inline-block;
   text-decoration: none;
   color: rgb(0, 180, 120);
+  transition-property: color, filter, transform;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in;
+
+  &:hover,
+  &:focus,
+  &:active {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
 
   &:hover,
   &:focus {

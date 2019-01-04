@@ -137,7 +137,7 @@ export class Home extends Component {
 
         <p className="dim" style={{ paddingTop: '3em' }}>
           <span className="dim" title="All right reserved.">
-            &copy; 2018, Kaleab S. Melkie.
+            &copy; 2019, Kaleab S. Melkie.
           </span>
         </p>
       </div>
