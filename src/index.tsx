@@ -13,6 +13,7 @@ fontawesomeLibrary()
 // animation on scroll
 AOS.init({
   once: true,
+  anchorPlacement: 'top-bottom',
 })
 
 // touch events
