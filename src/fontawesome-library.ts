@@ -1,4 +1,4 @@
-import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { faUserAstronaut, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
@@ -23,5 +23,3 @@ export function fontawesomeLibrary() {
   // regular (free)
   library.add()
 }
-
-dom.watch()
