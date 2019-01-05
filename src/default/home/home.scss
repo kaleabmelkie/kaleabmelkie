@@ -1,5 +1,6 @@
-$touchFilter: opacity(0.5);
-$touchTransform: scale3d(2.2, 2.2, 2.2);
+// todo: refactor theme variables
+$touchFilter: drop-shadow(0 3px 7px rgba(255, 75, 135, 0.25));
+$touchTransform: scale3d(1.14, 1.14, 1.14);
 $mobile: 480px;
 $width: 840px;
 
@@ -9,12 +10,16 @@ $width: 840px;
   max-width: $width;
 }
 
-#page_home {
+.block {
+  display: block !important;
+}
+
+#page-home {
   padding: 4em;
 }
 
 @media (max-width: $mobile) {
-  #page_home {
+  #page-home {
     padding: 1em;
   }
 }
@@ -42,7 +47,7 @@ $width: 840px;
     }
   }
 
-  a#kelalLogo {
+  a#kelal-logo {
     img {
       padding: 0.2em;
       width: 2em;
@@ -61,4 +66,8 @@ $width: 840px;
       }
     }
   }
+}
+
+[data-aos] {
+  display: inline-block;
 }
