@@ -31,7 +31,7 @@ export class Home extends Component {
               <a
                 target="_blank"
                 rel="noopener"
-                href="http://kelaltech.com/"
+                href="https://www.kelaltech.com/"
                 className="kelal-wordmark"
                 title="The Company builds tech that allows smoother information flow."
               >
@@ -139,7 +139,7 @@ export class Home extends Component {
                 id="kelal-logo"
                 target="_blank"
                 rel="noopener"
-                href="http://kelaltech.com/"
+                href="https://www.kelaltech.com/"
                 title="The Company."
               >
                 <img alt="kelal tech. Logo" src={kelalTechLogoSrc} />
