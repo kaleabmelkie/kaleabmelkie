@@ -17,16 +17,15 @@ class MyApp extends App {
         <Head>
           <meta name="theme-color" content="#2A2A2A" />
           <meta name="author" content="Kaleab S. Melkie" />
-          <meta
-            name="keywords"
-            content="kaleab,serekebrhan,melkie,official,website"
-          />
           <meta name="copyright" content="2019 © Kaleab S. Melkie" />
           <meta
             name="description"
             content="Official Website of Kaleab S. Melkie (https://bit.ly/kaleab)"
           />
-          <meta name="keywords" content="kaleab,serekebrhan,melkie,website" />
+          <meta
+            name="keywords"
+            content="kaleab,serekebrhan,melkie,official,website"
+          />
           <meta name="robots" content="index,follow" />
 
           <meta property="og:url" content="https://kaleab.kelaltech.com/" />
