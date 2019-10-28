@@ -1,7 +1,7 @@
 {
   "short_name": "Kaleab",
   "name": "Kaleab S. Melkie",
-  "description": "Kaleab S. Melkie | Co-founder & CEO, kelal tech.",
+  "description": "Official Website of Kaleab S. Melkie (https://bit.ly/kaleab)",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,12 +10,12 @@
     },
     {
       "src": "logo-512.png",
-      "sizes": "512x512 256x256 128x128",
+      "sizes": "512x512 256x256 192x192 152x152 144x144 128x128",
       "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#00B478",
-  "background_color": "#f2f2f2"
+  "theme_color": "#2A2A2A",
+  "background_color": "#F2F2F2"
 }

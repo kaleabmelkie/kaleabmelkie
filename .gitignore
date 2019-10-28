@@ -22,7 +22,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# IDEs
-/.idea
-/.vs
-/.vscode
+# next.js
+/.next/
+/out/
+
+# ides
+.idea
+.vscode
+.vs
+
+# typescript
+*.tsbuildinfo
