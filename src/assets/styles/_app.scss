@@ -28,10 +28,6 @@ body {
   background-size: cover;
   color: rgb(14, 14, 14);
 
-  @media (max-width: 560px) {
-    font-size: 16px;
-  }
-
   @media (max-width: 320px) {
     font-size: 14px;
   }

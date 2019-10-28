@@ -15,7 +15,7 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          <meta name="theme-color" content="#2A2A2A" />
+          <meta name="theme-color" content="#2a2a2a" />
           <meta name="author" content="Kaleab S. Melkie" />
           <meta name="copyright" content="2019 © Kaleab S. Melkie" />
           <meta
