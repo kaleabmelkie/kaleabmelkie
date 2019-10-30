@@ -2,6 +2,7 @@ const dotenvLoad = require('dotenv-load')
 const webpack = require('webpack')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
+const BrotliPlugin = require('brotli-webpack-plugin')
 
 const withPlugins = require('next-compose-plugins')
 
@@ -24,12 +25,15 @@ const nextConfig = {
 
   webpack: (config, { dev }) => {
     if (!dev) {
+      // css minification & optimization
       config.optimization.minimizer.push(new OptimizeCSSAssetsPlugin({}))
 
+      // chuck count
       config.plugins.push(
         new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 })
       )
 
+      // gzip compression
       config.plugins.push(
         new CompressionPlugin({
           filename: '[path].gz[query]',
@@ -38,10 +42,11 @@ const nextConfig = {
           deleteOriginalAssets: false
         })
       )
+
+      // brotli compression
       config.plugins.push(
-        new CompressionPlugin({
-          filename: '[path].br[query]',
-          algorithm: 'brotliCompress',
+        new BrotliPlugin({
+          asset: '[path].br[query]',
           test: /\.(js|css|html|json|svg|webp|png|jpg|jpeg|gif|tiff)$/,
           deleteOriginalAssets: false
         })
