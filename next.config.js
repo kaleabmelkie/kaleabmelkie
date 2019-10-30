@@ -1,6 +1,7 @@
 const dotenvLoad = require('dotenv-load')
 const webpack = require('webpack')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 const withPlugins = require('next-compose-plugins')
 
@@ -27,6 +28,23 @@ const nextConfig = {
 
       config.plugins.push(
         new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 })
+      )
+
+      config.plugins.push(
+        new CompressionPlugin({
+          filename: '[path].gz[query]',
+          algorithm: 'gzip',
+          test: /\.(js|css|html|json|svg|webp|png|jpg|jpeg|gif|tiff)$/,
+          deleteOriginalAssets: false
+        })
+      )
+      config.plugins.push(
+        new CompressionPlugin({
+          filename: '[path].br[query]',
+          algorithm: 'brotliCompress',
+          test: /\.(js|css|html|json|svg|webp|png|jpg|jpeg|gif|tiff)$/,
+          deleteOriginalAssets: false
+        })
       )
     }
 
