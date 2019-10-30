@@ -8,11 +8,11 @@ import LetsConnect from './components/lets-connect/lets-connect'
 
 function Home() {
   const srcQuerystring = useMemo(
-    () => qs.stringify({ email: 'kaleabmelkie@gmail.com', s: 360, d: 'mp' }),
+    () => qs.stringify({ email: 'kaleabmelkie@gmail.com', s: 320, d: 'mp' }),
     []
   )
   const placeholderQuerystring = useMemo(
-    () => qs.stringify({ email: 'kaleabmelkie@gmail.com', s: 2, d: 'mp' }),
+    () => qs.stringify({ email: 'kaleabmelkie@gmail.com', s: 1, d: 'mp' }),
     []
   )
 
