@@ -18,7 +18,14 @@ export default {
     type: 'website',
     locale: 'en_US',
     url: 'https://kaleab.kelaltech.com/',
-    site_name: 'Official Website of Kaleab S. Melkie'
+    site_name: 'Official Website of Kaleab S. Melkie',
+    images: [{ url: 'https://kaleab.kelaltech.com/promo.png' }],
+    profile: {
+      firstName: 'Kaleab',
+      lastName: 'Melkie',
+      gender: 'male',
+      username: 'kaleab'
+    }
   },
 
   twitter: {
