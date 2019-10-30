@@ -16,12 +16,11 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
       .digest('hex')
   )
 
-  const options = {
+  const options: http.RequestOptions = {
+    method: 'GET',
     host: 'www.gravatar.com',
     port: 80,
-    path: `/avatar/${emailHash}?${qs.stringify(request.query)}`,
-    method: 'GET',
-    headers: { 'Cache-Control': 'public, max-age=31557600' } // 1 year
+    path: `/avatar/${emailHash}?${qs.stringify(request.query)}`
   }
 
   const proxy = http
@@ -37,6 +36,11 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
       response.writeHead(500)
       response.end()
     })
+
+  response.setHeader(
+    'cache-control',
+    'must_revalidate, public, max-age=31557600' // 1 year
+  )
 
   request.pipe(
     proxy,
