@@ -26,7 +26,7 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
   const proxyRequest = https
     .request(options, proxyResponse => {
       proxyResponse.headers['cache-control'] =
-        'must_revalidate, public, max-age=31557600' // 1 year
+        'must_revalidate, public, max-age=86400' // 1 day
 
       response.writeHead(proxyResponse.statusCode, proxyResponse.headers)
       proxyResponse.pipe(

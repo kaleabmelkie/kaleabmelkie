@@ -9,10 +9,8 @@ const withPlugins = require('next-compose-plugins')
 const env = require('next-env')
 const css = require('@zeit/next-css')
 const sass = require('@zeit/next-sass')
-const purgeCss = require('next-purgecss')
-const images = require('next-images')
 const fonts = require('next-fonts')
-const optimizedImages = require('next-optimized-images')
+const images = require('next-images')
 const offline = require('next-offline')
 const bundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
@@ -38,7 +36,9 @@ const nextConfig = {
         new CompressionPlugin({
           filename: '[path].gz[query]',
           algorithm: 'gzip',
-          test: /\.(js|css|html|json|svg|webp|png|jpg|jpeg|gif|tiff)$/,
+          test: /\.(js|css|html|json|md|svg|webp|png|jpg|jpeg|gif|tiff|ico)$/,
+          threshold: 0,
+          minRatio: 0.99,
           deleteOriginalAssets: false
         })
       )
@@ -47,7 +47,9 @@ const nextConfig = {
       config.plugins.push(
         new BrotliPlugin({
           asset: '[path].br[query]',
-          test: /\.(js|css|html|json|svg|webp|png|jpg|jpeg|gif|tiff)$/,
+          test: /\.(js|css|html|json|md|svg|webp|png|jpg|jpeg|gif|tiff|ico)$/,
+          threshold: 0,
+          minRatio: 0.99,
           deleteOriginalAssets: false
         })
       )
@@ -57,12 +59,11 @@ const nextConfig = {
   }
 }
 
-module.exports = config = withPlugins(
+module.exports = withPlugins(
   [
     // next-env
     env({
-      staticPrefix: 'REACT_APP_',
-      publicPrefix: 'REACT_APP_'
+      staticPrefix: 'REACT_APP_'
     }),
 
     // @zeit/next-css
@@ -71,20 +72,8 @@ module.exports = config = withPlugins(
     // @zeit/next-sass
     sass,
 
-    // next-purgecss
-    [purgeCss, { purgeCssPaths: ['src/**/*'] }],
-
     // next-images
     images,
-
-    // next-optimized-images
-    [
-      optimizedImages,
-      {
-        handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif', 'ico'],
-        optimizeImagesInDev: true
-      }
-    ],
 
     // next-fonts
     fonts,
@@ -98,7 +87,7 @@ module.exports = config = withPlugins(
           runtimeCaching: [
             {
               urlPattern: /^https?.*/,
-              handler: 'CacheFirst'
+              handler: 'NetworkFirst'
             },
             {
               urlPattern: /(\/service-worker.js$)|(\/api\/)/,
