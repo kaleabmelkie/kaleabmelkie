@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://kaleab.kelaltech.com/sitemap.xml
