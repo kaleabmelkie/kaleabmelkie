@@ -1,0 +1,28 @@
+.lets-connect {
+  display: block;
+
+  padding: 48px 0 0;
+
+  text-align: center;
+
+  a {
+    display: inline-block;
+
+    margin: 8px;
+    padding: 4px;
+
+    width: 1.56em;
+    height: 1.8em;
+  }
+}
+
+.lets-connect-separator {
+  display: inline-block;
+
+  padding: 0 4px;
+
+  font-weight: 100;
+  font-size: 1.8em;
+
+  color: rgba(0, 0, 0, 0.07);
+}
