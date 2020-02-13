@@ -69,10 +69,13 @@ yarn-error.log
 .yarn-integrity
 
 # IDEs
-.idea
-.vscode
-.vs
+.idea/
+.vscode/
+.vs/
 
-# GraphQl
+# GraphQL
 graphql-types.ts
 schema.graphql
+
+# Local Netlify folder
+.netlify

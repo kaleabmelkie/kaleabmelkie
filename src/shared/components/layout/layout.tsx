@@ -2,13 +2,13 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import './layout.scss'
-import { FooterQuery } from '../../../../graphql-types'
+import { LayoutQuery } from '../../../../graphql-types'
 import App from '../../../app/app'
 
 type LayoutProps = React.PropsWithChildren<{}>
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const data = useStaticQuery<FooterQuery>(query)
+  const data = useStaticQuery<LayoutQuery>(query)
 
   return (
     <>
@@ -26,7 +26,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 export default Layout
 
 const query = graphql`
-  query Footer {
+  query Layout {
     site {
       siteMetadata {
         copyright
