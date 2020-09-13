@@ -1,7 +1,0 @@
-.cache
-data
-graphql-types.ts
-package-lock.json
-public
-schema.graphql
-tsconfig.json
