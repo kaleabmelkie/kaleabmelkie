@@ -40,5 +40,10 @@
     "endOfLine": "lf",
     "semi": false,
     "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format && yarn build && git update-index --again"
+    }
   }
 }

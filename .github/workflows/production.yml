@@ -1,0 +1,60 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - 'master'
+  workflow_dispatch:
+
+jobs:
+  build_test_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.2
+        with:
+          node-version: ^12.18.3
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Reuse build caches
+        uses: actions/cache@master
+        with:
+          path: |
+            .next
+          key: next-${{ hashFiles('**/*') }}
+
+      - name: Reuse cached node_modules
+        uses: actions/cache@master
+        with:
+          path: |
+            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            node_modules
+          key: yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: yarn install
+        run: yarn install --frozen-lockfile
+        env:
+          CI: true
+
+      - name: yarn export
+        run: yarn export
+        env:
+          NODE_ENV: production
+          CI: true
+
+      - name: Deploy www/public to Vercel
+        uses: amondnet/vercel-action@v19.0.1+3
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: --prod
+          working-directory: out/
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-name: ${{ secrets.VERCEL_PROJECT_NAME }}
+          scope: ${{ secrets.VERCEL_SCOPE }}
