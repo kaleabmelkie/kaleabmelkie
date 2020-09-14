@@ -42,7 +42,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format && yarn build && git update-index --again"
+      "pre-commit": "yarn build && yarn format && git update-index --again"
     }
   }
 }
