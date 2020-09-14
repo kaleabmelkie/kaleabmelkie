@@ -1,13 +1,13 @@
 import React from 'react'
-import { DiNpm } from 'react-icons/di'
 import {
-  FiAtSign,
-  FiGithub,
-  FiGitlab,
-  FiLinkedin,
-  FiTwitter,
-} from 'react-icons/fi'
-import { RiTelegramLine } from 'react-icons/ri'
+  RiAtLine,
+  RiGithubLine,
+  RiLinkedinLine,
+  RiMediumLine,
+  RiTelegramLine,
+  RiTwitterLine,
+  RiUnsplashLine,
+} from 'react-icons/ri'
 
 import styles from './lets-connect.module.scss'
 
@@ -20,31 +20,31 @@ const LetsConnect: React.FC<LetsConnectProps> = () => {
         href="mailto:kaleab@kelaltech.com"
         title="Email (kaleab@kelaltech.com)"
       >
-        <FiAtSign />
+        <RiAtLine />
       </a>
       <a
         href="https://linkedin.com/in/kaleabmelkie"
         title="LinkedIn (/in/kaleabmelkie)"
       >
-        <FiLinkedin />
+        <RiLinkedinLine />
       </a>
       <a href="https://t.me/kaleab14" title="Telegram (@kaleab14)">
         <RiTelegramLine />
       </a>
       <a href="https://twitter.com/kaleab14" title="Twitter (@kaleab14)">
-        <FiTwitter />
+        <RiTwitterLine />
       </a>
 
       <span className={styles['lets-connect-separator']}>|</span>
 
       <a href="https://github.com/kaleabmelkie" title="GitHub (@kaleabmelkie)">
-        <FiGithub />
+        <RiGithubLine />
       </a>
-      <a href="https://gitlab.com/kaleabmelkie" title="GitLab (@kaleabmelkie)">
-        <FiGitlab />
+      <a href="https://medium.com/@kaleabmelkie" title="Medium (@kaleabmelkie)">
+        <RiMediumLine />
       </a>
-      <a href="https://www.npmjs.com/~kaleabmelkie" title="NPM (~kaleabmelkie)">
-        <DiNpm />
+      <a href="https://unsplash.com/@kaleab" title="Unsplash (@kaleab)">
+        <RiUnsplashLine />
       </a>
 
       <br />

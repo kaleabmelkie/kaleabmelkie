@@ -9,10 +9,13 @@
     display: inline-block;
 
     margin: 0 8px;
-    padding: 4px;
 
-    width: 1.45em;
+    width: 1.2em;
     height: 1.8em;
+
+    font-size: 1.2em;
+    line-height: 1.8em;
+    text-align: center;
 
     @media (max-width: 480px) {
       width: 1.38em;
@@ -36,4 +39,6 @@
   padding: 0 !important;
 
   width: initial !important;
+
+  font-size: inherit !important;
 }
