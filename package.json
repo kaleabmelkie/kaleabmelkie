@@ -12,8 +12,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "lint": "prettier public/ src/ *.{ts,json,md}",
-    "format": "prettier --write public/ src/ *.{ts,json,md}"
+    "lint": "prettier pages/ public/ src/ *.{ts,json,md}",
+    "format": "prettier --write pages/ public/ src/ *.{ts,json,md}"
   },
   "dependencies": {
     "next": "9.5.3",
