@@ -8,13 +8,13 @@ const Titles: React.FC<TitlesProps> = () => {
   return (
     <>
       <h1 className={styles.title}>
-        <span className={styles['first-name']}>kaleab</span>{' '}
-        <abbr title="serekebrhan">s.</abbr> melkie
+        <span className={styles['first-name']}>Kaleab</span>{' '}
+        <abbr title="Serekebrhan">S.</abbr> Melkie
       </h1>
 
       <sub className={styles.subtitle}>
-        co-founder &amp;&amp; ceo,{' '}
-        <a href="https://www.kelaltech.com/">kelal tech plc</a>
+        Co-founder &amp;&amp; CEO,{' '}
+        <a href="https://www.kelaltech.com/">Kelal Tech PLC</a>
       </sub>
     </>
   )
