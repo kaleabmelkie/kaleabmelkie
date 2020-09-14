@@ -1,19 +1,19 @@
 import React from 'react'
 
-import { IndexProps } from '../../../pages/index'
-import LetsConnect from './components/lets-connect/lets-connect'
-import ProfilePhoto from './components/profile-photo/profile-photo'
-import Titles from './components/titles/titles'
+import LetsConnect from '../lets-connect/lets-connect'
+import ProfilePhoto from '../profile-photo/profile-photo'
+import Titles from '../titles/titles'
+import styles from './home.module.scss'
 
-type HomeProps = IndexProps
+type HomeProps = unknown
 
 const Home: React.FC<HomeProps> = () => {
   return (
-    <>
+    <div className={styles.home}>
       <ProfilePhoto />
       <Titles />
       <LetsConnect />
-    </>
+    </div>
   )
 }
 

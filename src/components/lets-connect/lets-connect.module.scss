@@ -8,11 +8,15 @@
   a {
     display: inline-block;
 
-    margin: 8px;
+    margin: 0 8px;
     padding: 4px;
 
-    width: 1.56em;
+    width: 1.45em;
     height: 1.8em;
+
+    @media (max-width: 480px) {
+      width: 1.38em;
+    }
   }
 }
 
@@ -25,4 +29,11 @@
   font-size: 1.8em;
 
   color: rgba(0, 0, 0, 0.07);
+}
+
+.upwork-link {
+  margin-top: 48px !important;
+  padding: 0 !important;
+
+  width: initial !important;
 }
