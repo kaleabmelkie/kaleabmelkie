@@ -1,13 +1,9 @@
 const withPlugins = require('next-compose-plugins')
 
-const withOptimizedImages = require('next-optimized-images')
 const withManifest = require('next-manifest')
 const withOffline = require('next-offline')
 
 module.exports = module.exports = withPlugins([
-  // https://npm.im/next-optimized-images
-  [withOptimizedImages, {}],
-
   // https://npm.im/next-manifest
   [
     withManifest,
