@@ -51,7 +51,7 @@ const LetsConnect: React.FC<LetsConnectProps> = () => {
 
       <div>
         <a
-          href="https://www.upwork.com/freelancers/~010f6fef556c20d502"
+          href="https://www.upwork.com/fl/kaleabmelkie"
           title="Hire me on Upwork!"
           className={styles['upwork-link']}
         >
