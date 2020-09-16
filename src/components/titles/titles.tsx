@@ -13,7 +13,9 @@ const Titles: React.FC<TitlesProps> = () => {
       </h1>
 
       <sub className={styles.subtitle}>
-        Co-founder &amp;&amp; CEO,{' '}
+        Co-founder <abbr title="and">&amp;&amp;</abbr>{' '}
+        <abbr title="Chief Executive Officer">CEO</abbr>
+        <abbr title="at">,</abbr>{' '}
         <a href="https://www.kelaltech.com/">Kelal Tech PLC</a>
       </sub>
     </>
