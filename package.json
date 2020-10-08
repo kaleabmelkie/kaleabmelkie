@@ -16,7 +16,7 @@
     "format": "prettier --write pages/ public/ src/ *.{ts,json,md}"
   },
   "dependencies": {
-    "next": "9.5.3",
+    "next": "9.5.4",
     "next-compose-plugins": "2.2.0",
     "next-manifest": "3.0.1",
     "next-offline": "5.0.2",
