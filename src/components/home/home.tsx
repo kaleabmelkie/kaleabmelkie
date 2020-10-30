@@ -1,5 +1,3 @@
-import React from 'react'
-
 import LetsConnect from '../lets-connect/lets-connect'
 import ProfilePhoto from '../profile-photo/profile-photo'
 import Titles from '../titles/titles'

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styles from './titles.module.scss'
 
 type TitlesProps = unknown
