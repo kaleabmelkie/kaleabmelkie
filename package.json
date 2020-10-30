@@ -1,12 +1,9 @@
 {
   "name": "kaleab",
   "description": "Kaleab S. Melkie's official website",
-  "version": "2.4.0",
+  "version": "2.3.0",
   "private": true,
   "license": "MIT",
-  "engines": {
-    "node": "^14"
-  },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
