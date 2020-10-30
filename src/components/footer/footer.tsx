@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styles from './footer.module.scss'
 
 type FooterProps = unknown

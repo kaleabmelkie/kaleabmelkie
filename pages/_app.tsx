@@ -1,5 +1,4 @@
 import { DefaultSeo } from 'next-seo'
-import React from 'react'
 
 import '../src/assets/styles/global.scss'
 import Footer from '../src/components/footer/footer'

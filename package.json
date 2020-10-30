@@ -1,39 +1,38 @@
 {
   "name": "kaleab",
   "description": "Kaleab S. Melkie's official website",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": "^12"
+    "node": "^14"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export",
     "lint": "prettier pages/ public/ src/ *.{ts,json,md}",
     "format": "prettier --write pages/ public/ src/ *.{ts,json,md}"
   },
   "dependencies": {
-    "next": "9.5.3",
+    "next": "10.0.0",
     "next-compose-plugins": "2.2.0",
     "next-manifest": "3.0.1",
     "next-offline": "5.0.2",
-    "next-seo": "4.7.3",
+    "next-seo": "4.14.1",
     "node-sass": "4.14.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "react-icons": "3.11.0"
   },
   "devDependencies": {
-    "@types/node": "^12",
-    "@types/react": "16.9.49",
-    "@types/react-dom": "16.9.8",
+    "@types/node": "^14",
+    "@types/react": "16.9.55",
+    "@types/react-dom": "16.9.9",
+    "cross-env": "7.0.2",
     "husky": "4.3.0",
-    "prettier": "2.1.1",
-    "typescript": "4.0.2",
-    "webpack": "5.0.0-beta.30"
+    "prettier": "2.1.2",
+    "typescript": "4.0.5"
   },
   "prettier": {
     "endOfLine": "lf",

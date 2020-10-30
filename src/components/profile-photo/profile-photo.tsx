@@ -1,22 +1,20 @@
-import Head from 'next/head'
-import React from 'react'
+import Image from 'next/image'
 
 import styles from './profile-photo.module.scss'
 
 type ProfilePhotoProps = unknown
 
 const ProfilePhoto: React.FC<ProfilePhotoProps> = () => {
-  const avatarSrc =
-    'https://www.gravatar.com/avatar/2b5daaa0ad27fd75b5d48672e6df074d?size=300'
-
   return (
     <div className={styles['profile-photo']}>
       <div className={styles['profile-photo-frame']}>
-        <Head>
-          <link rel="preload" as="image" href={avatarSrc} />
-        </Head>
-
-        <img alt="Kaleab S. Melkie's Avatar" src={avatarSrc} />
+        <Image
+          alt="Kaleab S. Melkie's Avatar"
+          src="https://www.gravatar.com/avatar/2b5daaa0ad27fd75b5d48672e6df074d?size=1080"
+          width={1080}
+          height={1080}
+          priority
+        />
       </div>
     </div>
   )
