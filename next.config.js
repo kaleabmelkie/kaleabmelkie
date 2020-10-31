@@ -82,9 +82,27 @@ module.exports = withPlugins(
       },
     ],
   ],
+
+  // default next.config:
   {
+    // next/images
     images: {
       domains: ['www.gravatar.com'],
+    },
+
+    // custom headers
+    async headers() {
+      return [
+        {
+          source: '/service-worker.js',
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'public, max-age=0, must-revalidate',
+            },
+          ],
+        },
+      ]
     },
   }
 )
