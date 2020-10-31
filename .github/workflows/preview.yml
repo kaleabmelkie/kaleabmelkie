@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_and_test:
+  deploy-preview:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,4 +30,3 @@ jobs:
         uses: JoseThen/comment-pr@v1
         with:
           comment: '### Preview Deploy Ready! 🚀\n\nName: ${{ steps.deploy-to-vercel.outputs.preview-name }}\nURL: ${{ steps.deploy-to-vercel.outputs.preview-url }}\n'
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
