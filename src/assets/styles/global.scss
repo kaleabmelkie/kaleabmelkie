@@ -16,6 +16,7 @@ body {
 
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
+  letter-spacing: -0.14px;
   line-height: 1.4;
 
   background-attachment: fixed;
@@ -30,7 +31,7 @@ body {
   background-size: cover;
   color: rgb(14, 14, 14);
 
-  @media (max-width: 320px) {
+  @media (max-width: 420px) {
     font-size: 14px;
   }
 }
