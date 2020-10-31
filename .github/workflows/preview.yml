@@ -31,6 +31,11 @@ jobs:
         id: create
         with:
           type: create
-          body: '### Preview Deploy Ready! 🚀\n\nName: ${{ steps.deploy-to-vercel.outputs.preview-name }}\nURL: [${{ steps.deploy-to-vercel.outputs.preview-url }}](${{ steps.deploy-to-vercel.outputs.preview-url }})\n'
+          body: |
+            ### Preview Deploy Ready!
+
+            ### [${{ steps.deploy-to-vercel.outputs.preview-url }}](${{ steps.deploy-to-vercel.outputs.preview-url }})
+
+            ### 🚀
           issue_number: ${{ github.event.number }}
           token: ${{ secrets.GITHUB_TOKEN }}
