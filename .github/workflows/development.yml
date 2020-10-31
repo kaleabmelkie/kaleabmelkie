@@ -11,15 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v2.3.3
 
-      - name: Deploy www/public to Vercel
-        uses: amondnet/vercel-action@v19.0.1+3
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v19.0.1+4
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          # vercel-args:
-          # working-directory: .
+          # vercel-args: --prod
+          # working-directory: ./
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-name: ${{ secrets.VERCEL_PROJECT_NAME }}
           scope: ${{ secrets.VERCEL_SCOPE }}
+        id: deploy-to-vercel
+
+      - name: Comment Deploy Preview URL on PR
+        uses: JoseThen/comment-pr@v1
+        with:
+          comment: '### Preview Deploy Ready! 🚀\n\nName: ${{ steps.deploy-to-vercel.outputs.preview-name }}\nURL: ${{ steps.deploy-to-vercel.outputs.preview-url }}\n'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
