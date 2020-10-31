@@ -3,6 +3,8 @@ const withPlugins = require('next-compose-plugins')
 const withManifest = require('next-manifest')
 const withOffline = require('next-offline')
 
+const { createSecureHeaders } = require('next-secure-headers')
+
 module.exports = withPlugins(
   [
     // https://npm.im/next-manifest
@@ -93,6 +95,7 @@ module.exports = withPlugins(
     // custom headers
     async headers() {
       return [
+        // avoid caching server worker script
         {
           source: '/service-worker.js',
           headers: [
@@ -101,6 +104,28 @@ module.exports = withPlugins(
               value: 'public, max-age=0, must-revalidate',
             },
           ],
+        },
+
+        // https://npm.im/next-secure-headers
+        {
+          source: '/(.*)',
+          headers: createSecureHeaders({
+            contentSecurityPolicy: {
+              directives: {
+                defaultSrc: "'self'",
+                scriptSrc: [
+                  "'self'",
+                  'https://www.googletagmanager.com',
+                  'https://www.google-analytics.com',
+                ],
+              },
+            },
+            forceHTTPSRedirect: [
+              true,
+              { maxAge: 63072000, includeSubDomains: true, preload: true },
+            ],
+            referrerPolicy: 'same-origin',
+          }),
         },
       ]
     },
