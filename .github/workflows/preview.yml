@@ -1,13 +1,13 @@
-name: CI/CD
+name: CI
 
 on:
-  push:
+  pull_request:
     branches:
       - 'master'
   workflow_dispatch:
 
 jobs:
-  deploy-production:
+  deploy-preview:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,9 +18,24 @@ jobs:
         uses: amondnet/vercel-action@v19.0.1+4
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-args: --prod
+          # vercel-args: --prod
           # working-directory: ./
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-name: ${{ secrets.VERCEL_PROJECT_NAME }}
           scope: ${{ secrets.VERCEL_SCOPE }}
+        id: deploy-to-vercel
+
+      - name: Comment Deploy Preview on PR
+        uses: jungwinter/comment@v1
+        id: create
+        with:
+          type: create
+          body: |
+            ### Preview Deploy Ready!
+
+            ### [${{ steps.deploy-to-vercel.outputs.preview-url }}](${{ steps.deploy-to-vercel.outputs.preview-url }})
+
+            ### 🚀
+          issue_number: ${{ github.event.number }}
+          token: ${{ secrets.GITHUB_TOKEN }}
