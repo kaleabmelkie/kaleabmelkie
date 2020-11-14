@@ -24,7 +24,7 @@
     "node-sass": "4.14.1",
     "preact": "10.5.7",
     "preact-render-to-string": "5.1.11",
-    "react": "npm:@preact/compat",
+    "react": "0.14.0",
     "react-dom": "npm:@preact/compat",
     "react-icons": "3.11.0"
   },
