@@ -5,30 +5,36 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "analyze": "cross-env ANALYZE=true NODE_ENV=production next build",
+    "build": "cross-env NODE_ENV=production next build",
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
-    "build": "next build",
-    "start": "next start",
+    "format": "prettier --write pages/ public/ src/ *.{ts,json,md}",
     "lint": "prettier pages/ public/ src/ *.{ts,json,md}",
-    "format": "prettier --write pages/ public/ src/ *.{ts,json,md}"
+    "start": "cross-env NODE_ENV=production next start"
   },
   "dependencies": {
-    "next": "10.0.0",
-    "next-compose-plugins": "2.2.0",
+    "@next/bundle-analyzer": "10.0.1",
+    "next": "10.0.1",
+    "next-compose-plugins": "2.2.1",
     "next-manifest": "3.0.1",
     "next-offline": "5.0.3",
     "next-secure-headers": "2.0.0",
-    "next-seo": "4.14.1",
+    "next-seo": "4.17.0",
     "node-sass": "4.14.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "3.11.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "3.0.0",
     "@types/node": "^14",
-    "@types/react": "16.9.55",
+    "@types/react": "16.9.56",
     "@types/react-dom": "16.9.9",
+    "compression-webpack-plugin": "6.1.1",
     "cross-env": "7.0.2",
     "husky": "4.3.0",
+    "postcss-flexbugs-fixes": "5.0.1",
+    "postcss-preset-env": "6.7.0",
     "prettier": "2.1.2",
     "typescript": "4.0.5"
   },
