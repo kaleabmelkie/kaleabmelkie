@@ -3,6 +3,7 @@ const withPlugins = require('next-compose-plugins')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
+const withPreact = require('next-plugin-preact')
 const withManifest = require('next-manifest')
 const withOffline = require('next-offline')
 
@@ -12,6 +13,9 @@ const zlib = require('zlib')
 
 module.exports = withPlugins(
   [
+    // https://npm.im/next-plugin-preact
+    [withPreact, {}],
+
     // https://npm.im/@next/bundle-analyzer
     [withBundleAnalyzer, {}],
 
