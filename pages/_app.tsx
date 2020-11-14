@@ -11,7 +11,7 @@ export async function reportWebVitals({ id, name, label, value }) {
 
   ;(window as any).dataLayer.push({
     event: label,
-    event_category: label === 'web-vital' ? 'Web Vitals' : `Custom: ${label}`,
+    event_category: label === 'web-vital' ? 'Web Vitals' : `Next.js Metrics`,
     event_action: name,
     event_value: Math.round(name === 'CLS' ? value * 1000 : value),
     event_label: id,
