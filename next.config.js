@@ -164,13 +164,18 @@ module.exports = withPlugins(
           headers: createSecureHeaders({
             contentSecurityPolicy: {
               directives: {
-                defaultSrc: ["'self'"],
+                defaultSrc: [
+                  "'self'",
+                  'https://www.googletagmanager.com',
+                  'https://www.google-analytics.com',
+                ],
                 styleSrc: ["'self'", "'unsafe-inline'"],
                 scriptSrc: [
                   "'self'",
-                  "'unsafe-inline'",
                   'https://www.googletagmanager.com',
                   'https://www.google-analytics.com',
+
+                  "'unsafe-inline'",
                 ],
               },
             },
