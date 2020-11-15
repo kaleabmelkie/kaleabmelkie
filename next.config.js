@@ -13,11 +13,11 @@ const zlib = require('zlib')
 
 module.exports = withPlugins(
   [
-    // https://npm.im/next-plugin-preact
-    [withPreact, {}],
-
     // https://npm.im/@next/bundle-analyzer
     [withBundleAnalyzer, {}],
+
+    // https://npm.im/next-plugin-preact
+    [withPreact, {}],
 
     // https://npm.im/next-manifest
     [
@@ -140,17 +140,6 @@ module.exports = withPlugins(
     // custom headers
     async headers() {
       return [
-        // cache Next.js optimized images
-        {
-          source: '/_next/image',
-          headers: [
-            {
-              key: 'Cache-Control',
-              value: 'public, max-age=86400', // 1 day
-            },
-          ],
-        },
-
         // avoid caching server worker script
         {
           source: '/service-worker.js',
