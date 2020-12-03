@@ -99,6 +99,7 @@ module.exports = withPlugins(
               handler: 'NetworkFirst',
             },
           ],
+          modifyURLPrefix: { 'autostatic/': '_next/static/' },
         },
       },
     ],
@@ -159,16 +160,11 @@ module.exports = withPlugins(
               directives: {
                 defaultSrc: [
                   "'self'",
-                  'https://www.googletagmanager.com',
-                  'https://www.google-analytics.com',
-                ],
-                styleSrc: ["'self'", "'unsafe-inline'"],
-                scriptSrc: [
-                  "'self'",
-                  'https://www.googletagmanager.com',
-                  'https://www.google-analytics.com',
-
                   "'unsafe-inline'",
+                  "data:",
+                  'http://www.googletagmanager.com',
+                  'https://www.googletagmanager.com',
+                  'https://www.google-analytics.com',
                 ],
               },
             },
