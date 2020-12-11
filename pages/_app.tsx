@@ -1,3 +1,5 @@
+const { NEXT_GTM_ID } = process.env
+
 import { DefaultSeo } from 'next-seo'
 import Router from 'next/router'
 import NProgress from 'nprogress'
@@ -45,6 +47,10 @@ export async function reportWebVitals({
   label,
   value,
 }: NextWebVitalsMetric) {
+  if (!NEXT_GTM_ID) {
+    return
+  }
+
   ;(window as any).dataLayer.push({
     event: label,
     event_category: label === 'web-vital' ? 'Web Vitals' : `Next.js Metrics`,
