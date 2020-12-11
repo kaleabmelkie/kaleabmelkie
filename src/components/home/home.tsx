@@ -1,17 +1,17 @@
-import LetsConnect from '../lets-connect/lets-connect'
-import ProfilePhoto from '../profile-photo/profile-photo'
-import Titles from '../titles/titles'
-import styles from './home.module.scss'
+import { HomeStyles } from './home.styles'
+import LetsConnect from './lets-connect/lets-connect'
+import ProfilePhoto from './profile-photo/profile-photo'
+import Titles from './titles/titles'
 
-type HomeProps = unknown
+export type HomeProps = unknown
 
-const Home: React.FC<HomeProps> = () => {
+function Home() {
   return (
-    <div className={styles.home}>
+    <HomeStyles>
       <ProfilePhoto />
       <Titles />
       <LetsConnect />
-    </div>
+    </HomeStyles>
   )
 }
 

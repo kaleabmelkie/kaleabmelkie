@@ -9,7 +9,7 @@ const seo: DefaultSeoProps = {
     description: "Kaleab S. Melkie's official website",
     images: [
       {
-        url: 'https://kaleab.kelaltech.com/icons/icon-512x512.png',
+        url: 'https://kaleab.kelaltech.com/images/app-icons/icon-512x512.png',
         width: 512,
         height: 512,
         alt: "Kaleab S. Melkie's official website icon",

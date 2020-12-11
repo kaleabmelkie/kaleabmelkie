@@ -1,0 +1,10 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    // https://npm.im/styled-components
+    ["styled-components", { "ssr": true }],
+
+    // https://npm.im/react-optimized-image
+    "react-optimized-image/plugin"
+  ]
+}

@@ -8,13 +8,13 @@ import {
   RiUnsplashLine,
 } from 'react-icons/ri'
 
-import styles from './lets-connect.module.scss'
+import { LetsConnectStyles } from './lets-connect.styles'
 
-type LetsConnectProps = unknown
+export type LetsConnectProps = unknown
 
-const LetsConnect: React.FC<LetsConnectProps> = () => {
+function LetsConnect() {
   return (
-    <div className={styles['lets-connect']}>
+    <LetsConnectStyles>
       <a
         href="mailto:kaleab@kelaltech.com"
         title="Email (kaleab@kelaltech.com)"
@@ -34,7 +34,7 @@ const LetsConnect: React.FC<LetsConnectProps> = () => {
         <RiTwitterLine />
       </a>
 
-      <span className={styles['lets-connect-separator']}>|</span>
+      <span className="lets-connect-separator">|</span>
 
       <a href="https://github.com/kaleabmelkie" title="GitHub (@kaleabmelkie)">
         <RiGithubLine />
@@ -52,12 +52,12 @@ const LetsConnect: React.FC<LetsConnectProps> = () => {
         <a
           href="https://www.upwork.com/fl/kaleabmelkie"
           title="Hire me on Upwork!"
-          className={styles['upwork-link']}
+          className="upwork-link"
         >
-          Let's work together!
+          Let&apos;s work together!
         </a>
       </div>
-    </div>
+    </LetsConnectStyles>
   )
 }
 

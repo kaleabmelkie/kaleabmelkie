@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-import styles from './profile-photo.module.scss'
+import { ProfilePhotoStyles } from './profile-photo.styles'
 
-type ProfilePhotoProps = unknown
+export type ProfilePhotoProps = unknown
 
-const ProfilePhoto: React.FC<ProfilePhotoProps> = () => {
+function ProfilePhoto() {
   return (
-    <div className={styles['profile-photo']}>
-      <div className={styles['profile-photo-frame']}>
+    <ProfilePhotoStyles>
+      <div className="profile-photo-frame">
         <Image
           alt="Kaleab S. Melkie's Avatar"
           src="https://www.gravatar.com/avatar/2b5daaa0ad27fd75b5d48672e6df074d?size=1440"
@@ -17,7 +17,7 @@ const ProfilePhoto: React.FC<ProfilePhotoProps> = () => {
           loading="eager"
         />
       </div>
-    </div>
+    </ProfilePhotoStyles>
   )
 }
 

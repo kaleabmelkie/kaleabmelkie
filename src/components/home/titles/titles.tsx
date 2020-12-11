@@ -1,22 +1,22 @@
-import styles from './titles.module.scss'
+import { TitlesStyles } from './titles.styles'
 
-type TitlesProps = unknown
+export type TitlesProps = unknown
 
-const Titles: React.FC<TitlesProps> = () => {
+function Titles() {
   return (
-    <>
-      <h1 className={styles.title}>
-        <span className={styles['first-name']}>Kaleab</span>{' '}
+    <TitlesStyles>
+      <h1 className="title">
+        <span className="first-name">Kaleab</span>{' '}
         <abbr title="Serekebrhan">S.</abbr> Melkie
       </h1>
 
-      <sub className={styles.subtitle}>
+      <sub className="subtitle">
         Co-founder <abbr title="and">&amp;&amp;</abbr>{' '}
         <abbr title="Chief Executive Officer">CEO</abbr>
         <abbr title="at">,</abbr>{' '}
         <a href="https://www.kelaltech.com/">Kelal Tech PLC</a>
       </sub>
-    </>
+    </TitlesStyles>
   )
 }
 

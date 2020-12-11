@@ -5,30 +5,50 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "use:preact": "yarn add react@npm:@preact/compat@0.0.3 react-dom@npm:@preact/compat@0.0.3 --exact",
+    "use:react": "yarn add react@17.0.1 react-dom@17.0.1 --exact",
+    "run-s": "run-s",
+    "run-p": "run-p",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "lint": "eslint . --fix",
+    "clean": "del-cli .next out public/manifest.json public/service-worker.js",
     "analyze": "cross-env ANALYZE=true NODE_ENV=production next build",
     "build": "cross-env NODE_ENV=production next build",
-    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
-    "format": "prettier --write pages/ public/ src/ *.{ts,json,md}",
-    "lint": "prettier pages/ public/ src/ *.{ts,json,md}",
+    "prod": "run-p lint \"run-s clean build\"",
     "start": "cross-env NODE_ENV=production next start",
-    "pm2": "pm2",
-    "pm2:start": "pm2 start pm2.json",
-    "use:preact": "yarn add react@npm:@preact/compat@0.0.3 react-dom@npm:@preact/compat@0.0.3 --exact",
-    "use:react": "yarn add react@17.0.1 react-dom@17.0.1 --exact"
+    "cluster": "pm2 start pm2.json"
   },
   "resolutions": {
     "**/@types/node": "^14",
+    "**/@types/styled-components": "^5",
+    "**/styled-components": "^5",
     "**/webpack": "5.10.0"
   },
   "dependencies": {
+    "@babel/preset-react": "7.12.10",
     "@fullhuman/postcss-purgecss": "3.0.0",
     "@next/bundle-analyzer": "10.0.3",
     "@types/node": "^14",
+    "@types/nprogress": "0.2.0",
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
+    "@types/styled-components": "5.1.5",
+    "@typescript-eslint/eslint-plugin": "4.9.1",
+    "@typescript-eslint/parser": "4.9.1",
+    "babel-plugin-styled-components": "1.12.0",
     "compression-webpack-plugin": "7.0.0",
     "cross-env": "7.0.3",
+    "dayjs": "1.9.7",
+    "del-cli": "3.0.1",
+    "eslint": "7.15.0",
+    "eslint-config-prettier": "7.0.0",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "3.2.0",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "4.2.0",
     "husky": "4.3.5",
+    "lint-staged": "10.5.3",
     "next": "10.0.3",
     "next-compose-plugins": "2.2.1",
     "next-manifest": "3.0.1",
@@ -36,8 +56,8 @@
     "next-plugin-preact": "3.0.3",
     "next-secure-headers": "2.0.0",
     "next-seo": "4.17.0",
-    "node-sass": "5.0.0",
-    "pm2": "4.5.0",
+    "npm-run-all": "4.1.5",
+    "nprogress": "0.2.0",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-preset-env": "6.7.0",
     "preact": "10.5.7",
@@ -46,6 +66,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "4.1.0",
+    "react-optimized-image": "0.4.1",
+    "styled-components": "5.2.1",
     "typescript": "4.1.2",
     "webpack": "5.10.0"
   },
@@ -56,7 +78,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build && yarn format && git update-index --again"
+      "pre-commit": "lint-staged"
     }
   }
 }
