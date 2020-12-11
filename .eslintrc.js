@@ -5,7 +5,13 @@ module.exports = {
     es6: true,
   },
   parserOptions: { ecmaVersion: 8 }, // to enable features such as async/await
-  ignorePatterns: ['node_modules/*', '.next/*', '.out/*', 'public/service-worker.js*', '!.prettierrc.js'], // We don't want to lint generated files nor node_modules, but we want to lint .prettierrc.js (ignored by default by eslint)
+  ignorePatterns: [
+    'node_modules/*',
+    '.next/*',
+    '.out/*',
+    'public/service-worker.js*',
+    '!.prettierrc.js',
+  ], // We don't want to lint generated files nor node_modules, but we want to lint .prettierrc.js (ignored by default by eslint)
   extends: ['eslint:recommended'],
   overrides: [
     // This configuration will apply only to TypeScript files
@@ -20,12 +26,12 @@ module.exports = {
       },
       extends: [
         'eslint:recommended',
-        
+
         'plugin:@typescript-eslint/recommended', // TypeScript rules
-        
+
         'plugin:react/recommended', // React rules
         'plugin:react-hooks/recommended', // React hooks rules
-        
+
         'plugin:jsx-a11y/recommended', // Accessibility rules
 
         'prettier/@typescript-eslint', // Prettier plugin
@@ -43,7 +49,7 @@ module.exports = {
 
         // Includes .prettierrc.js rules
         'prettier/prettier': ['warn', {}, { usePrettierrc: true }],
-        
+
         // You wouldn't want these...
         '@typescript-eslint/no-unused-vars': ['error'],
         '@typescript-eslint/explicit-function-return-type': 'off',

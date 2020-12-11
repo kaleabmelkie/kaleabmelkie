@@ -11,7 +11,7 @@
     "run-p": "run-p",
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "lint": "eslint . --fix",
+    "lint": "eslint . --fix && prettier --write .",
     "clean": "del-cli .next out public/manifest.json public/service-worker.js",
     "analyze": "cross-env ANALYZE=true NODE_ENV=production next build",
     "build": "cross-env NODE_ENV=production next build",
