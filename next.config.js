@@ -1,9 +1,10 @@
+const { USE_PREACT, NEXT_THEME_COLOR } = process.env
+
 const withPlugins = require('next-compose-plugins')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
-const withPreact = require('next-plugin-preact')
 const withManifest = require('next-manifest')
 const withOffline = require('next-offline')
 
@@ -11,13 +12,14 @@ const { createSecureHeaders } = require('next-secure-headers')
 const CompressionPlugin = require('compression-webpack-plugin')
 const zlib = require('zlib')
 
+// https://npm.im/next-compose-plugins
 module.exports = withPlugins(
   [
     // https://npm.im/@next/bundle-analyzer
     [withBundleAnalyzer, {}],
 
     // https://npm.im/next-plugin-preact
-    [withPreact, {}],
+    USE_PREACT === 'true' ? [require('next-plugin-preact')(), {}] : {},
 
     // https://npm.im/next-manifest
     [
@@ -78,7 +80,7 @@ module.exports = withPlugins(
             },
           ],
           background_color: '#FFFFFF',
-          theme_color: '#0E0E0E',
+          theme_color: NEXT_THEME_COLOR,
         },
       },
     ],
@@ -161,7 +163,7 @@ module.exports = withPlugins(
                 defaultSrc: [
                   "'self'",
                   "'unsafe-inline'",
-                  "data:",
+                  'data:',
                   'http://www.googletagmanager.com',
                   'https://www.googletagmanager.com',
                   'https://www.google-analytics.com',
@@ -179,9 +181,9 @@ module.exports = withPlugins(
     },
 
     // custom webpack config
-    webpack: (config, options) => {
+    webpack: (config, { dev }) => {
       // add gzip compression
-      if (!options.dev) {
+      if (!dev) {
         config.plugins.push(
           new CompressionPlugin({
             filename: '[path][base].gz',
@@ -194,7 +196,7 @@ module.exports = withPlugins(
       }
 
       // add brotli compression
-      if (!options.dev) {
+      if (!dev) {
         config.plugins.push(
           new CompressionPlugin({
             filename: '[path][base].br',

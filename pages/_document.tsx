@@ -1,3 +1,5 @@
+const { NEXT_THEME_COLOR, NEXT_GTM_ID } = process.env
+
 import Manifest from 'next-manifest/manifest'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
@@ -13,13 +15,13 @@ class MyDocument extends Document {
         <Head>
           <script
             dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W6M6V2H');`,
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${NEXT_GTM_ID}');`,
             }}
           ></script>
 
           <Manifest
             href="/manifest.json"
-            themeColor="#0E0E0E"
+            themeColor={NEXT_THEME_COLOR}
             initialScale="1"
           />
 
@@ -92,7 +94,7 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/icons/favicon-16x16.png"
           />
-          <meta name="msapplication-TileColor" content="#0E0E0E" />
+          <meta name="msapplication-TileColor" content={NEXT_THEME_COLOR} />
           <meta
             name="msapplication-TileImage"
             content="/icons/ms-icon-144x144.png"
@@ -102,7 +104,7 @@ class MyDocument extends Document {
         <body>
           <noscript>
             <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-W6M6V2H"
+              src={`https://www.googletagmanager.com/ns.html?id=${NEXT_GTM_ID}`}
               height={0}
               width={0}
               style={{ display: 'none', visibility: 'hidden' }}
