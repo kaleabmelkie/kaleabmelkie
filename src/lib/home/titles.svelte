@@ -3,9 +3,7 @@
 </h1>
 
 <sub>
-  Co-founder <abbr title="and">&amp;&amp;</abbr>
-  <abbr title="Chief Executive Officer">CEO</abbr><abbr title="at">,</abbr>
-  <a href="https://www.kelaltech.com/">Kelal Tech PLC</a>
+  Co-founder, <a href="https://www.kelaltech.com/">Kelal Tech</a>
 </sub>
 
 <style>
@@ -28,7 +26,7 @@
   sub {
     display: block;
 
-    font-size: 0.96em;
+    font-size: 1em;
     font-weight: 100;
     text-align: center;
 

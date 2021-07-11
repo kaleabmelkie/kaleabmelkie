@@ -7,7 +7,7 @@
     <img
       alt="Kaleab S. Melkie's Avatar"
       src="{src}?size=360"
-      sizes="(min-width: 960px) 33vw, (min-width: 1440px) 25vw, (max-width: 720px) 56vw, (max-width: 480px) 75vw, 38vw"
+      sizes="(min-width: 960px) 33vw, (min-width: 1440px) 25vw, (max-width: 720px) 56vw, (max-width: 480px) 75vw, 35vw"
       loading="eager"
     />
   </div>
@@ -27,8 +27,8 @@
     overflow: hidden;
     position: relative;
 
-    width: 38vh;
-    height: 38vh;
+    width: 35vh;
+    height: 35vh;
 
     max-width: 50vw;
     max-height: 50vw;

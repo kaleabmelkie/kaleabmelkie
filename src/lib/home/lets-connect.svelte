@@ -5,10 +5,12 @@
   import MediumIcon from 'svelte-icons/fa/FaMediumM.svelte'
   import TelegramIcon from 'svelte-icons/fa/FaTelegramPlane.svelte'
   import TwitterIcon from 'svelte-icons/fa/FaTwitter.svelte'
+
+  import UnsplashIcon from '../../assets/icons/unsplash.svg.svelte'
 </script>
 
 <div class="lets-connect">
-  <a href="mailto:hi@kaleabmelkie.com" title="Email (kaleab@kelaltech.com)">
+  <a href="mailto:hi@kaleabmelkie.com" title="Email (hi@kaleabmelkie.com)">
     <EmailIcon />
   </a>
   <a href="https://linkedin.com/in/kaleabmelkie" title="LinkedIn (/in/kaleabmelkie)">
@@ -21,7 +23,7 @@
     <TwitterIcon />
   </a>
 
-  <span class="lets-connect-separator">|</span>
+  <span class="lets-connect-separator" />
 
   <a href="https://github.com/kaleabmelkie" title="GitHub (@kaleabmelkie)">
     <GithubIcon />
@@ -29,9 +31,9 @@
   <a href="https://medium.com/@kaleabmelkie" title="Medium (@kaleabmelkie)">
     <MediumIcon />
   </a>
-  <!-- <a href="https://unsplash.com/@kaleab" title="Unsplash (@kaleab)">
+  <a href="https://unsplash.com/@kaleab" title="Unsplash (@kaleab)">
     <UnsplashIcon />
-  </a> -->
+  </a>
 
   <br />
 
@@ -53,31 +55,32 @@
 
   a {
     display: inline-block;
+    vertical-align: middle;
 
-    margin: 0 8px;
+    margin: 0 6px;
 
     width: 1em;
-    height: 1.8em;
+    height: 1.5em;
 
     font-size: 1.2em;
     line-height: 1.8em;
     text-align: center;
   }
-  @media (max-width: 480px) {
-    a {
-      width: 1.1em;
-    }
-  }
 
   .lets-connect-separator {
     display: inline-block;
+    vertical-align: middle;
 
-    padding: 0 4px;
+    margin: 0 4px;
+
+    height: 1.8em;
+    width: 1px;
 
     font-weight: 100;
-    font-size: 1.8em;
 
-    color: rgba(0, 0, 0, 0.07);
+    border-radius: 1px;
+
+    background-color: rgba(0, 0, 0, 0.07);
   }
 
   .upwork-link {
