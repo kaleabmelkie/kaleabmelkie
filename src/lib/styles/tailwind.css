@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply font-semibold
+    hover:text-blue-500 focus:text-green-500 
+    transition-colors;
+  }
+}

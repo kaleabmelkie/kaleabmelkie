@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn format && git update-index --again
+pnpm run format && pnpm run check && git update-index --again

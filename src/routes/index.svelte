@@ -1,9 +1,28 @@
-<script lang="ts">
-  import LetsConnect from '../lib/home/lets-connect.svelte'
-  import ProfilePhoto from '../lib/home/profile-photo.svelte'
-  import Titles from '../lib/home/titles.svelte'
+<script lang="ts" context="module">
+  import type { Item } from '$lib/types/item'
+  import type { Load } from '@sveltejs/kit'
+
+  export const load: Load<object, { props: { items: Item[] } }> = async () => {
+    const items: Item[] = [] // TODO: ...
+
+    return { props: { items } }
+  }
 </script>
 
-<ProfilePhoto />
-<Titles />
-<LetsConnect />
+<script lang="ts">
+  import ItemCard from '$lib/components/item-card.svelte'
+
+  export const items: Item[] = []
+</script>
+
+<section class="grid gap-4">
+  {#each items as item (item.id)}
+    <ItemCard {item} />
+  {:else}
+    <p>
+      Nothing to see here yet.
+      <br />
+      Come back later. 🙃
+    </p>
+  {/each}
+</section>
