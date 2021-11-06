@@ -4,7 +4,7 @@
     "outDir": "./dist/",
     "incremental": true,
 
-    "target": "ESNext",
+    "target": "ES2019",
     "lib": ["ESNext", "DOM"],
     "module": "ESNext",
     "moduleResolution": "node",
