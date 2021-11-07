@@ -21,6 +21,7 @@ specifiers:
   tailwindcss: 2.2.19
   tslib: 2.3.1
   typescript: 4.4.4
+  workbox-precaching: 6.3.0
 
 devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.21
@@ -43,6 +44,7 @@ devDependencies:
   tailwindcss: 2.2.19_0c54bdadaf9d9c9c6c134cb2c6c061a3
   tslib: 2.3.1
   typescript: 4.4.4
+  workbox-precaching: 6.3.0
 
 packages:
 
@@ -2317,6 +2319,30 @@ packages:
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /workbox-core/6.3.0:
+    resolution: {integrity: sha512-SufToEV3SOLwwz3j+P4pgkfpzLRUlR17sX3p/LrMHP/brYKvJQqjTwtSvaCkkAX0RPHX2TFHmN8xhPP1bpmomg==}
+    dev: true
+
+  /workbox-precaching/6.3.0:
+    resolution: {integrity: sha512-bND3rUxiuzFmDfeKywdvOqK0LQ5LLbOPk0eX22PlMQNOOduHRxzglMpgHo/MR6h+8cPJ3GpxT8hZ895/7bHMqQ==}
+    dependencies:
+      workbox-core: 6.3.0
+      workbox-routing: 6.3.0
+      workbox-strategies: 6.3.0
+    dev: true
+
+  /workbox-routing/6.3.0:
+    resolution: {integrity: sha512-asajX5UPkaoU4PB9pEpxKWKkcpA+KJQUEeYU6NlK0rXTCpdWQ6iieMRDoBTZBjTzUdL3j3s1Zo2qCOSvtXSYGg==}
+    dependencies:
+      workbox-core: 6.3.0
+    dev: true
+
+  /workbox-strategies/6.3.0:
+    resolution: {integrity: sha512-SYZt40y+Iu5nA+UEPQOrAuAMMNTxtUBPLCIaMMb4lcADpBYrNP1CD+/s2QsrxzS651a8hfi06REKt+uTp1tqfw==}
+    dependencies:
+      workbox-core: 6.3.0
     dev: true
 
   /wrappy/1.0.2:
