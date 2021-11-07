@@ -16,12 +16,15 @@
 
     return {
       props: {
-        items: mediumItems.map((i) => ({
-          link: i.link,
-          title: i.title,
-          published_at: new Date(i.published).toISOString(),
-          excerpt_html: i.description,
-          tags: i.categories,
+        items: mediumItems.map((item, i) => ({
+          link: item.link,
+          title: item.title,
+          excerpt_html: item.description
+            .replace(/<a /g, `<a aria-label="Read more about: ${item.title}" `)
+            .replace(/<img /g, `<img alt="Article picture of: ${item.title}" `)
+            .replace(/\.medium\.com\/max\/[0-9]+\//g, '.medium.com/max/512/')
+            .replace(/ width="[0-9]+"/g, ' width="512"')
+            .replace(/<img /g, `<img loading="${i < 1 ? 'eager' : 'lazy'}" `),
         })),
       },
     }
@@ -30,7 +33,26 @@
 
 <script lang="ts">
   export let items: Item[] = []
+
+  $: priorityImages = items
+    .slice(0, 1)
+    .map(
+      (i) =>
+        i.excerpt_html
+          ?.match(/<img (.*?)src="(.*?)" /g)
+          ?.map((m) =>
+            m.replace(/^<img (.*?)src="/g, '').replace(/" $/g, '')
+          ) || []
+    )
+    .filter((i) => i !== null)
+    .flat()
 </script>
+
+<svelte:head>
+  {#each priorityImages as src}
+    <link rel="preload" as="image" href={src} />
+  {/each}
+</svelte:head>
 
 <section class="grid gap-4">
   {#each items as item (item.link)}
