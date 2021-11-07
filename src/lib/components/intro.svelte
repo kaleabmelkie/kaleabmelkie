@@ -18,17 +18,17 @@
 <header
   class="
     grid gap-6
-    py-4 lg:py-0
+    py-4 md:py-0
     rounded-md
   "
 >
   <div
-    class="grid gap-6 grid-flow-col lg:grid-flow-row justify-start items-start"
+    class="grid gap-6 grid-flow-col md:grid-flow-row justify-start items-start"
   >
     <a sveltekit:prefetch href="/">
       <img
         class="
-          w-24 lg:w-36 h-32 lg:h-48 min-w-[6rem]
+          w-24 md:w-36 h-32 md:h-48 min-w-[6rem]
           rounded-md
           object-cover
           bg-gray-200 dark:bg-gray-700 shadow-sm
@@ -41,10 +41,10 @@
       />
     </a>
 
-    <div class="grid gap-3 lg:gap-6">
+    <div class="grid gap-3 md:gap-6">
       <h1
         class="
-          font-extrabold text-2xl lg:text-4xl uppercase
+          font-extrabold text-2xl md:text-3xl lg:text-4xl uppercase
           bg-gradient-to-tr from-blue-500 dark:from-blue-500 to-green-600 dark:to-green-400
           bg-clip-text text-transparent
         "
@@ -66,7 +66,7 @@
 
   <nav class="overflow-x-auto max-w-full">
     <ul
-      class="grid gap-3 lg:gap-2 grid-flow-col lg:grid-flow-row justify-start"
+      class="grid gap-3 md:gap-2 grid-flow-col md:grid-flow-row justify-start"
     >
       {#each links as link (link.name)}
         <li>

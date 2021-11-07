@@ -7,23 +7,23 @@
 
 <main
   class="
-    bg-gray-100 dark:bg-gray-800 text-black dark:text-white
+    bg-gray-50 dark:bg-gray-900 text-black dark:text-white
     transition-colors
   "
 >
   <div
     class="
-      grid gap-3 lg:gap-6 content-start
-      mx-auto p-4 lg:p-12
+      grid gap-3 md:gap-6 content-start
+      mx-auto p-4 md:p-12
       min-h-screen max-w-screen-lg
     "
   >
-    <div class="grid gap-3 lg:gap-6 lg:grid-cols-4">
+    <div class="grid gap-3 md:gap-6 md:grid-cols-4">
       <aside>
         <Intro />
       </aside>
 
-      <div class="lg:col-span-3">
+      <div class="md:col-span-3">
         <slot />
       </div>
     </div>
