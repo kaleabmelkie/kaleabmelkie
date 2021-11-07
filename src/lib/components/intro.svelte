@@ -25,19 +25,21 @@
   <div
     class="grid gap-6 grid-flow-col lg:grid-flow-row justify-start items-start"
   >
-    <img
-      class="
-        w-24 lg:w-36 h-32 lg:h-48 min-w-[6rem]
-        rounded-md
-        object-cover
-        bg-gray-200 dark:bg-gray-700 shadow-sm
-      "
-      src="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
-      alt="Kaleab's Avatar"
-      width={144}
-      height={192}
-      loading="eager"
-    />
+    <a sveltekit:prefetch href="/">
+      <img
+        class="
+          w-24 lg:w-36 h-32 lg:h-48 min-w-[6rem]
+          rounded-md
+          object-cover
+          bg-gray-200 dark:bg-gray-700 shadow-sm
+        "
+        src="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
+        alt="Kaleab's Avatar"
+        width={144}
+        height={192}
+        loading="eager"
+      />
+    </a>
 
     <div class="grid gap-3 lg:gap-6">
       <h1
@@ -50,17 +52,15 @@
         <a sveltekit:prefetch href="/">Kaleab's Notes</a>
       </h1>
 
-      <div class="grid gap-2">
-        <p class="opacity-90">
-          I develop software at <a
-            class="link"
-            href="https://www.kelaltech.com/"
-            rel="external"
-          >
-            Kelal Tech</a
-          >, and I write stuff here.
-        </p>
-      </div>
+      <p class="opacity-90">
+        I develop software at <a
+          class="link"
+          href="https://www.kelaltech.com/"
+          rel="external"
+        >
+          Kelal Tech</a
+        >, and I put stuff here.
+      </p>
     </div>
   </div>
 
@@ -70,7 +70,7 @@
     >
       {#each links as link (link.name)}
         <li>
-          <a class="link" href={link.url} rel="external">
+          <a class="link" rel="external" href={link.url}>
             {link.name}
           </a>
         </li>

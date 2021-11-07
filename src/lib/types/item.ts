@@ -1,5 +1,8 @@
 export type Item = {
-  id: string
-
-  // TODO: ...
+  link: string
+  title: string
+  /** ISO Date */
+  published_at: string
+  excerpt_html: string
+  tags: string[]
 }
