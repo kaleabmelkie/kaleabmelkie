@@ -10,14 +10,14 @@
   }
 
   .item-card-excerpt .medium-feed-item {
-    @apply grid gap-4 lg:gap-6 grid-flow-col justify-start items-start
+    @apply grid gap-4 md:gap-6 grid-flow-col justify-start items-start
     w-full;
   }
 
   .item-card-excerpt .medium-feed-item .medium-feed-image {
     @apply relative overflow-hidden
-    row-start-2 lg:row-start-1
-    w-full lg:w-48 h-36 lg:h-32 min-w-[6rem]
+    row-start-2 md:row-start-1
+    w-full md:w-48 h-36 md:h-32 min-w-[6rem]
     rounded-md
     bg-gray-200 dark:bg-gray-700 shadow-sm;
   }
@@ -28,12 +28,12 @@
   }
 
   .item-card-excerpt .medium-feed-item .medium-feed-snippet {
-    @apply row-start-1 lg:row-start-1 col-start-1 lg:col-start-2 col-span-2 lg:col-span-1
+    @apply row-start-1 md:row-start-1 col-start-1 md:col-start-2 col-span-2 md:col-span-1
     w-full max-w-[280px];
   }
 
   .item-card-excerpt .medium-feed-item .medium-feed-link {
-    @apply row-start-3 lg:row-start-2 col-start-1 col-span-2
+    @apply row-start-3 md:row-start-2 col-start-1 col-span-2
     w-full;
   }
 

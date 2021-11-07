@@ -1,6 +1,6 @@
 {
   "name": "kaleabmelkie",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "engines": {
     "node": "14.x"
   },
@@ -35,7 +35,8 @@
     "svelte-preprocess": "4.9.8",
     "tailwindcss": "2.2.19",
     "tslib": "2.3.1",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "workbox-precaching": "6.3.0"
   },
   "type": "module",
   "postcss": {

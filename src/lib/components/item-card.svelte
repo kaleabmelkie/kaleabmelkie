@@ -6,13 +6,13 @@
 
 <article
   class="
-    grid gap-3 lg:gap-6
-    p-4 lg:p-6
-    rounded-md
-    bg-gray-50 dark:bg-gray-900 shadow-sm
+    grid gap-3 md:gap-6
+    p-4 md:p-6
+    border dark:border-transparent rounded-md
+    bg-white dark:bg-gray-800
   "
 >
-  <h2 class="font-semibold text-2xl lg:text-3xl">
+  <h2 class="font-semibold text-2xl md:text-3xl">
     <a class="link" rel="external" href={item.link}>{item.title}</a>
   </h2>
 
