@@ -6,7 +6,7 @@
     text-gray-900 dark:text-gray-400
   "
 >
-  <hr class="border-gray-200 dark:border-gray-700" />
+  <hr class="border-gray-200 dark:border-gray-800" />
 
   <span>
     {new Date().getFullYear()} &copy; Kaleab

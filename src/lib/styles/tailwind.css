@@ -9,22 +9,35 @@
     transition-colors;
   }
 
+  .item-card-excerpt {
+    @apply grid gap-4 md:gap-6 relative
+    w-full;
+  }
+
+  .item-card-excerpt a {
+    @apply link;
+  }
+
+  .item-card-excerpt span[href] {
+    @apply break-all opacity-80;
+  }
+
+  .item-card-excerpt img,
+  .item-card-excerpt video {
+    @apply object-cover
+    rounded-md
+    w-auto h-48 max-w-full
+    bg-gray-200 dark:bg-gray-700 shadow-sm;
+  }
+
   .item-card-excerpt .medium-feed-item {
     @apply grid gap-4 md:gap-6 grid-flow-col justify-start items-start
     w-full;
   }
 
   .item-card-excerpt .medium-feed-item .medium-feed-image {
-    @apply relative overflow-hidden
-    row-start-2 md:row-start-1
-    w-full md:w-48 h-36 md:h-32 min-w-[6rem]
-    rounded-md
-    bg-gray-200 dark:bg-gray-700 shadow-sm;
-  }
-
-  .item-card-excerpt .medium-feed-item .medium-feed-image img {
-    @apply w-full h-full
-    object-cover;
+    @apply relative
+    row-start-2 md:row-start-1;
   }
 
   .item-card-excerpt .medium-feed-item .medium-feed-snippet {
@@ -35,9 +48,5 @@
   .item-card-excerpt .medium-feed-item .medium-feed-link {
     @apply row-start-3 md:row-start-2 col-start-1 col-span-2
     w-full;
-  }
-
-  .item-card-excerpt .medium-feed-item .medium-feed-link a {
-    @apply link;
   }
 }

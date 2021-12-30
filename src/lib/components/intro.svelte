@@ -52,7 +52,7 @@
         <a sveltekit:prefetch href="/">Kaleab's Notes</a>
       </h1>
 
-      <p class="opacity-90">
+      <p class="opacity-80">
         I develop software at <a
           class="link"
           href="https://www.kelaltech.com/"
