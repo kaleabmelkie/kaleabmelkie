@@ -16,7 +16,7 @@
     "format": "prettier --ignore-path .gitignore --check --write --plugin-search-dir=. src \"*.{cjs,js,json,md}\" && eslint --fix --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "5.8.1",
     "@typescript-eslint/parser": "5.8.1",
