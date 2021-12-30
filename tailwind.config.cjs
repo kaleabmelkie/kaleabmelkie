@@ -1,5 +1,3 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['src/**/*.svelte'],
-  darkMode: 'media',
+  content: ['src/**/*.svelte'],
 }

@@ -1,6 +1,4 @@
 <script lang="ts">
-  import '$lib/styles/tailwind.css'
-
   import Intro from '$lib/components/intro.svelte'
   import Footer from '$lib/components/footer.svelte'
 </script>
@@ -33,3 +31,7 @@
     </aside>
   </div>
 </main>
+
+<style global>
+  @import '$lib/styles/tailwind.css';
+</style>
