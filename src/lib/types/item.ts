@@ -1,7 +1,7 @@
 export type Item = {
-  published_at: number
+	published_at: number
 
-  link: string
-  title: string
-  excerpt_html: string
+	link: string
+	title: string
+	excerpt_html: string
 }

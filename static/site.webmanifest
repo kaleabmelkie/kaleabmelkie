@@ -1,25 +1,25 @@
 {
-  "scope": "/",
-  "name": "Kaleab's Notes",
-  "short_name": "Kaleab's Notes",
-  "description": "A collection of notes and thoughts by Kaleab Serekebrhan Melkie",
-  "icons": [
-    {
-      "src": "https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=512",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
-  "start_url": "/?utm_source=web_app_manifest",
-  "display": "standalone",
-  "orientation": "natural",
-  "background_color": "#FFFFFF",
-  "theme_color": "#1F2937"
+	"scope": "/",
+	"name": "Kaleab S. Melkie",
+	"short_name": "Kaleab S. Melkie's Official Website",
+	"description": "A collection of platform links and articles by Kaleab Serekebrhan Melkie.",
+	"icons": [
+		{
+			"src": "https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=512",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	],
+	"start_url": "/?utm_source=web_app_manifest",
+	"display": "standalone",
+	"orientation": "natural",
+	"background_color": "#FFFFFF",
+	"theme_color": "#1F2937"
 }

@@ -1,67 +1,77 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Kaleab's Notes</title>
-    <meta
-      name="description"
-      content="A collection of notes and thoughts by Kaleab Serekebrhan Melkie."
-    />
+		<style>
+			@font-face {
+				font-family: 'InterVariable';
+				font-style: normal;
+				font-display: swap;
+				font-weight: 100 900;
+				src: url('%sveltekit.assets%/assets/fonts/inter-variable-latin.woff2') format('woff2');
+				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+					U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+			}
+		</style>
 
-    <link
-      rel="icon"
-      href="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
-    />
+		<title>Kaleab S. Melkie's Official Website</title>
+		<meta
+			name="description"
+			content="A collection of platform links and articles by Kaleab Serekebrhan Melkie."
+		/>
 
-    <link
-      rel="manifest"
-      crossorigin="use-credentials"
-      href="/site.webmanifest"
-    />
-    <meta name="theme-color" content="#1F2937" />
+		<link rel="manifest" href="%sveltekit.assets%/site.webmanifest" />
+		<meta name="theme-color" content="#1F2937" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@kaleab14" />
-    <meta name="twitter:creator" content="@kaleab14" />
-    <meta name="twitter:title" content="Kaleab's Notes" />
-    <meta
-      name="twitter:description"
-      content="A collection of notes and thoughts by Kaleab Serekebrhan Melkie."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
-    />
+		<link
+			rel="icon"
+			href="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="192x192"
+			href="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
+		/>
 
-    <meta property="og:title" content="Kaleab's Notes" />
-    <meta
-      property="og:description"
-      content="A collection of notes and thoughts by Kaleab Serekebrhan Melkie."
-    />
-    <meta
-      property="og:image"
-      content="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
-    />
-    <meta property="og:url" content="https://kaleabmelkie.com" />
-    <meta property="og:site_name" content="Kaleab's Notes" />
-    <meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@kaleab14" />
+		<meta name="twitter:creator" content="@kaleab14" />
+		<meta name="twitter:title" content="Kaleab S. Melkie's Official Website" />
+		<meta
+			name="twitter:description"
+			content="A collection of platform links and articles by Kaleab Serekebrhan Melkie."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
+		/>
 
-    <script
-      defer
-      data-domain="kaleabmelkie.com"
-      src="https://plausible.io/js/plausible.js"
-    ></script>
+		<meta property="og:title" content="Kaleab S. Melkie's Official Website" />
+		<meta
+			property="og:description"
+			content="A collection of platform links and articles by Kaleab Serekebrhan Melkie."
+		/>
+		<meta
+			property="og:image"
+			content="https://www.gravatar.com/avatar/c8fdec81587d62796a4561cfe1a536d0?size=192"
+		/>
+		<meta property="og:url" content="https://kaleabmelkie.com" />
+		<meta property="og:site_name" content="Kaleab S. Melkie's Official Website" />
+		<meta property="og:type" content="website" />
 
-    %svelte.head%
-  </head>
-  <body>
-    <div id="svelte">%svelte.body%</div>
-  </body>
+		<script
+			defer
+			data-domain="kaleabmelkie.com"
+			src="https://plausible.io/js/plausible.js"
+		></script>
+
+		%sveltekit.head%
+	</head>
+
+	<body data-sveltekit-preload-data="hover" data-sveltekit-preload-code="viewport">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
 </html>
