@@ -73,9 +73,11 @@ async function fetchAndCacheItems() {
 				title: item.title,
 				excerpt_html: truncatise(
 					item.content
-						.replace(/<a( |>)/g, `<span `)
+						.replace(/<a /g, `<span `)
+						.replace(/<a>/g, `<span>`)
 						.replace(/<\/a>/g, `</span>`)
-						.replace(/<(h1|h2|h3|h4|h5|h6)( |>)/g, `<p `)
+						.replace(/<(h1|h2|h3|h4|h5|h6) /g, `<p `)
+						.replace(/<(h1|h2|h3|h4|h5|h6)>/g, `<p>`)
 						.replace(/<\/(h1|h2|h3|h4|h5|h6)>/g, `</p>`)
 						.replace(/ href=/g, ` aria-label=`)
 						.replace(
