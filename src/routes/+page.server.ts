@@ -8,7 +8,7 @@ const itemsCache = new Cache<Item[]>(1000 * 60 * 60 * 24 * 14) // 2 weeks
 
 export const load = (async () => {
 	const itemsFromCache = itemsCache.get('default')
-	if (itemsFromCache) {
+	if (itemsFromCache?.length) {
 		fetchAndCacheItems().catch(console.error) // don't wait
 		return {
 			items: itemsFromCache,
