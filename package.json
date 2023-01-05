@@ -11,8 +11,8 @@
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
 		"prepare": "husky install",
-		"dev": "vite dev",
-		"build": "vite build",
+		"dev": "svelte-kit sync && vite dev",
+		"build": "svelte-kit sync && vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -20,7 +20,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "1.0.0",
+		"@sveltejs/adapter-static": "1.0.0",
 		"@sveltejs/kit": "1.0.1",
 		"@typescript-eslint/eslint-plugin": "5.48.0",
 		"@typescript-eslint/parser": "5.48.0",
