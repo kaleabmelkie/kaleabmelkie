@@ -9,6 +9,10 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+
+		prerender: {
+			origin: 'https://kaleabmelkie.com',
+		},
 	},
 }
 

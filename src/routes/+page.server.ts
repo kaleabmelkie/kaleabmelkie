@@ -76,9 +76,9 @@ async function fetchAndCacheItems() {
 						.replace(/<a /g, `<span `)
 						.replace(/<a>/g, `<span>`)
 						.replace(/<\/a>/g, `</span>`)
-						.replace(/<(h1|h2|h3|h4|h5|h6) /g, `<p `)
-						.replace(/<(h1|h2|h3|h4|h5|h6)>/g, `<p>`)
-						.replace(/<\/(h1|h2|h3|h4|h5|h6)>/g, `</p>`)
+						.replace(/<(h1|h2|h3|h4|h5|h6) /g, `<div `)
+						.replace(/<(h1|h2|h3|h4|h5|h6)>/g, `<div>`)
+						.replace(/<\/(h1|h2|h3|h4|h5|h6)>/g, `</div>`)
 						.replace(/ href=/g, ` aria-label=`)
 						.replace(
 							/<img /g,
