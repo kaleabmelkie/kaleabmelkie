@@ -5,9 +5,11 @@
 	"private": false,
 	"license": "MIT",
 	"engines": {
-		"node": "18.x"
+		"node": "^18",
+		"pnpm": "^7"
 	},
 	"scripts": {
+		"preinstall": "npx only-allow pnpm",
 		"prepare": "husky install",
 		"dev": "vite dev",
 		"build": "vite build",
