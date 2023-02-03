@@ -37,9 +37,8 @@
 			</h1>
 
 			<p class="text-sm opacity-70">
-				<a class="link" rel="external" href="https://www.upwork.com/fl/kaleabmelkie"
-					>Freelance full-stack developer on Upwork</a
-				> specializing in Svelte, TypeScript, GraphQL, and Node.js.
+				<a class="link" rel="external" href="https://www.upwork.com/fl/kaleabmelkie">Developer</a> specializing
+				in Svelte, TypeScript, GraphQL, and Node.js.
 			</p>
 
 			<a
