@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@builder.io/partytown': 0.7.5
   '@sveltejs/adapter-static': 1.0.6
   '@sveltejs/kit': 1.3.10
   '@typescript-eslint/eslint-plugin': 5.50.0
@@ -25,6 +26,7 @@ specifiers:
   vite: 4.1.1
 
 devDependencies:
+  '@builder.io/partytown': 0.7.5
   '@sveltejs/adapter-static': 1.0.6_@sveltejs+kit@1.3.10
   '@sveltejs/kit': 1.3.10_svelte@3.55.1+vite@4.1.1
   '@typescript-eslint/eslint-plugin': 5.50.0_go4drrxstycfikanvu45pi4vgq
@@ -49,6 +51,11 @@ devDependencies:
   vite: 4.1.1
 
 packages:
+
+  /@builder.io/partytown/0.7.5:
+    resolution: {integrity: sha512-Zbr2Eo0AQ4yzmQr/36/h+6LKjmdVBB3Q5cGzO6rtlIKB/IOpbQVUZW+XAnhpJmJr9sIF97OZjgbhG9k7Sjn4yw==}
+    hasBin: true
+    dev: true
 
   /@esbuild/android-arm/0.16.17:
     resolution: {integrity: sha512-N9x1CMXVhtWEAMS7pNNONyA14f71VPQN9Cnavj1XQh6T7bskqiLLrSca4O0Vr8Wdcga943eThxnVp3JLnBMYtw==}
