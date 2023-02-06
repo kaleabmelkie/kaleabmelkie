@@ -5,10 +5,10 @@ import path from 'path'
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
-		sveltekit(),
 		partytownVite({
 			dest: path.join(__dirname, 'static', '~partytown'),
 		}),
+		sveltekit(),
 	],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}'],
